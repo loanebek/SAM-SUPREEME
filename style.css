@@ -1,0 +1,634 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #12181E;
+    color: #8B8B8B;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-weight: lighter;
+}
+
+.logo img {
+    width: 100px; /* Adjust the size of your logo */
+}
+
+.navbar ul {
+    list-style: none;
+    color: #fff;
+    font-weight: lighter;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-left: 20px;
+    color: #8B8B8B;
+    font-weight:lighter;
+}
+
+.navbar ul li a {
+    font-family: 'SourceSans3', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: #8B8B8B;
+    font-weight:lighter;
+    transition: background-color 0.3s, color 0.3s; /* Pour un effet de transition doux */
+    
+}
+.navbar ul li a.active{
+    color: #f5f5F5;
+}
+.navbar ul li a:hover {
+    color: #f5f5f5; 
+}
+
+.hero {
+    display: flex;
+    padding: 50px 5%;
+    color:#f5f5F5;
+    align-items: center;
+    
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column; /* Change l'ordre et place l'image en dessous du texte */
+    }
+
+    .left-column {
+        width: 100%;
+    }
+    .right-column {
+        width: 100%; 
+    }
+}
+
+.left-column {
+    width: 30%;
+    margin-left: 45px;
+}
+
+.left-column .training-text {
+    font-size: 12px;
+    width: auto;
+}
+
+.left-column h1 {
+    font-size: 40px;
+    font-weight: bold;
+    
+}
+
+.left-column .description {
+    font-size: 16px;
+    margin: 20px 0;
+    width: auto;
+    font-weight: lighter;
+    line-height: 2,5px;
+}
+
+button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color:#f5f5F5;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'SourceSans3', sans-serif;
+    font-weight: normal;
+    transition: background-color 0.3s, color 0.3s; /* Pour un effet de transition doux */
+    margin-bottom: 50px;
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: #12181E;
+    color: #f5f5F5;
+    font-family: 'SourceSans3', sans-serif;
+}
+
+.right-column {
+    width: 60%;
+    padding-left: 30px;
+    ;
+   
+}
+
+.right-column img {
+    
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    
+   
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.feature-item {
+    padding: 0 20px;
+    flex: 1; /* Chaque élément prendra un espace égal dans le conteneur */
+    margin: 0 5px; /* Ajoutez un peu d'espace entre les éléments */
+}
+
+.feature-text {
+    color: #8B8B8B;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight:200;
+    
+}
+
+.discover-button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #f5f5F5;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Poppins';
+    font-size: 13px;
+    font-weight: normal;
+    transition: background-color 0.3s, color 0.3s; /* Pour un effet de transition doux */
+}
+
+.discover-button:hover {
+    background-color: #12181E;
+    color: #f5f5F5;
+}
+
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-item {
+        margin: 20px 0; /* Ajoutez plus d'espace vertical entre les éléments */
+    }
+}
+
+footer {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    color: #778DA8;
+    font-family: 'SourceSans3', sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); 
+    
+}
+
+.dropdown {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 40px;
+
+}
+
+.dropdown-button {
+    color: #8B8B8B;
+    cursor: pointer;
+    font-size: 35px;
+    font-family: 'SourceSans3', sans-serif;
+}
+
+.dropdown-button:hover {
+    color: #12181E;
+    cursor: pointer;
+    font-size: 35px;
+}
+.dropdown-content {
+    
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #12181E;
+    min-width: 100vw;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    align-items: center;
+    color: #8b8b8b;;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.dropdown-content a.active {
+
+color: #f5f5F5;
+}
+.dropdown-content a:hover {
+    background-color: transparent;
+    color: #f5f5F5;
+}
+
+.social-icons {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.social-icons .icon {
+    color: #778DA8;
+    font-size: 30px;
+    padding: 0 10px;
+}
+
+.social-icons .icon:hover {
+    color: #555;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 100px 150px;
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid { 
+        grid-template-columns: 1fr;
+    }
+}
+
+.product-item {
+    text-align: center;
+    border: 1px solid transparent;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.product-item a {
+    text-decoration: none;
+}
+
+.product-item img {
+    max-width: 100%;
+    aspect-ratio: 1 / 1; /* Assure que l'image est carrée */
+    object-fit: cover; /* Garantit que l'image couvre bien tout l'espace */
+    transition: transform 0.3s ease;
+}
+
+.product-item h3, .product-item p {
+    color: #8B8B8B;
+    transition: color 0.3s ease;
+}
+
+.product-item:hover img, .product-item:hover h3 {
+    transform: scale(1.05);
+    color: #f5f5f5;
+}
+
+.panier-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 30px; /* Espace entre les éléments */
+}
+
+.panier-item {
+    text-align: center; /* icônes */
+color: #778DA8;
+    transition: transform 0.3s ease;
+}
+
+.panier-item p {
+margin-top: 10px;
+color: #778DA8;
+font-family: 'Poppins', sans-serif;
+display: inline-block; /* Permet l'effet de transformation sur les icônes et le texte */
+        transition: transform 0.3s ease; /* Transition pour un effet fluide */
+}
+@media (max-width: 768px) {
+    .panier-section {
+    flex-direction: column;
+    }}
+
+.panier-item:hover {
+        transform: scale(1.1); /* Grossit l'élément au survol */
+    }
+    
+.panier-item i {
+        display: inline-block; /* Permet l'effet de transformation sur les icônes et le texte */
+        transition: transform 0.3s ease; /* Transition pour un effet fluide */
+    }
+    
+.panier-item i:hover {
+        transform: scale(1.1); /* Grossit l'icône ou le texte au survol */
+    }
+.panier-item p:hover {
+    transform: scale(1.1); 
+}
+
+.product-page {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    margin: 20px 70px;
+}
+
+.product-image {
+    flex: 1;
+    max-width: 50%;
+    align-items: center;
+}
+
+.product-image img {
+    width: 75%;
+    height: auto;
+    
+}
+
+.product-info {
+    flex: 1;
+    max-width: 50%;
+    padding-left: 20px;
+   
+}
+
+.product-info h2, .product-info .price, .product-info .tva, .product-info .description {
+    margin-top: 10px;
+    
+}
+
+.product-info .description {
+    font-size: 14px;
+}
+
+.product-info .price {
+    color: #f5f5F5;
+}
+
+.product-info .tva {
+    font-size: 12px;
+}
+
+.add-to-cart {
+    display: inline-block;
+    padding: 10px 50px;
+    background-color: #f5f5f5;
+    color: #555;
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+.add-to-cart:hover {
+    background-color: #555;
+}
+
+
+.details-produit {
+    font-size: 18 px;
+    font-weight: 900;
+    display: flex;
+
+
+}
+
+@media (max-width: 768px) {
+    .product-page {
+    flex-direction: initial;
+    }
+
+    .product-image, .product-info {
+        max-width: 100%;
+    }
+    
+    .product-info {
+        padding-left: 0;
+        padding-top: 20px;
+    }
+}
+
+.product-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    font-size: 14px;
+    margin-top: 20px ;
+}
+
+.back-to-catalog {
+    color: #8B8B8B;
+text-decoration: none;
+transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.back-to-catalog:hover {
+color: #f5f5f5;
+transform: scale(1.1);
+}
+
+.side-buttons {
+display: flex;
+}
+
+.nav-button {
+color: #8B8B8B;
+text-decoration: none;
+font-size: 24px;
+padding: 0 10px;
+transition: color 0.3s ease;
+}
+
+.nav-button:hover {
+color: #f5f5f5;
+}
+
+.recommended-products {
+    margin: 40px 0;
+    text-align: start;
+    color: #f5f5F5;
+}
+
+.recommended-products h3 {
+    margin-bottom: 20px;
+    margin-left: 45px;
+}
+
+.reco{
+    display: inline-flex;
+    justify-content: flex-start;
+    gap: 0px;
+    margin-left: 45px
+}
+
+.suggestion {
+    text-align:start;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.suggestion img {
+    width: 45%;
+    aspect-ratio: 1 / 1; /* Pour maintenir les images carrées */
+    object-fit:cover;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.suggestion h4 {
+    color: #8B8B8B;
+    transition: color 0.3s ease;
+}
+
+.suggestion:hover {
+    transform: scale(1.1);
+}
+
+.suggestion:hover h4 {
+    color: #f5f5f5;
+}
+
+/* Adaptations pour les petits écrans */
+@media (max-width: 768px) {
+    .reco {
+        flex-direction: row;
+    }
+
+    .suggestion {
+        width: 80%; /* Ajuster selon vos préférences */
+        margin: 0 auto;
+    }
+}
+.cart-container {
+    width: 35%;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    
+   
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+    text-decoration: none;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #202529;
+    padding-bottom: 10px;
+    text-decoration: none;
+
+}
+
+.cart-item-image-container {
+    flex-basis: 130px; /* ou la largeur de l'image souhaitée */
+}
+
+.cart-item-image {
+    width: 100%; /* pour rendre l'image responsive dans son conteneur */
+    height: auto;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+    padding-left: 10px; /* pour un peu d'espace entre l'image et le titre/quantité */
+}
+
+.cart-item-title {
+    display: block; /* ou 'inline-block' si vous voulez que tout soit sur la même ligne */
+    font-size: 16px;
+    margin-bottom: 50px; /* espace entre le titre et la barre de quantité */
+}
+
+.cart-item-quantity-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.cart-item-quantity {
+    border: 1px solid #12181E;
+    background-color: #12181E;
+    color: #f5f5f5;
+    padding: 5px;
+    width: 50px; /* ou la largeur souhaitée */
+    font-size: 14px;
+}
+
+.cart-item-price {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.remove-cart-item {
+    cursor: pointer;
+    color: white;
+    font-size: 24px; /* Rend l'icône de suppression plus grande et plus visible */
+    padding: 0 10px;
+    /* Ajoutez une hauteur minimale et alignez le texte au centre si vous voulez que l'icône de suppression soit verticalement centrée */
+    min-height: 120px; /* Doit correspondre à la hauteur de votre .cart-item-image pour un alignement vertical */
+    display: flex;
+    align-items:baseline;
+}
+
+.remove-cart-item:hover {
+
+    color: #555;
+}
+
+.cart-item-image-container:hover .cart-item-image:hover,
+.cart-item-details:hover .cart-item-title {
+    transform: scale(1.1);
+}
+
+.cart-item-details:hover .cart-item-title {
+    color: #f5f5f5;
+}
+
+/* Assurez-vous que la transition est douce */
+.cart-item-image, .cart-item-title {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.cart-item-image-container a, .cart-item-details a {
+    text-decoration: none; /* Supprime le soulignement des liens */
+    color: inherit; /* Garde la couleur du texte héritée */
+}
+.cart-item-image-container a:hover, .cart-item-details
+a:hover {
+/* Vos styles pour le survol ici /
+/ Exemple : pour grossir l'image et changer la couleur du titre */
+transform: scale(1.1);
+color: #f5f5f5;
+}
